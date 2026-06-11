@@ -42,7 +42,7 @@ All seven pages light up from a single Power Platform export. Add optional compa
 ## Quick start
 
 1. **Download** [`ESS Dashboard Template (CSV Upload).pbit`](./ESS%20Dashboard%20Template%20(CSV%20Upload).pbit) from this repo.
-2. **Export your conversation transcripts** from the Dataverse environment that hosts your ESS agent (the only required file).
+2. **Export your conversation transcripts** from the Power Platform environment that hosts your ESS agent (the only required file).
 3. **Open the .pbit** in Power BI Desktop. When prompted, paste the full path to your transcripts CSV and click **Load**.
 4. **Done.** All 7 pages populate from that one file. Optional companion files unlock breakouts (see below).
 
