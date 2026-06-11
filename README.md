@@ -27,15 +27,15 @@ All seven pages light up from a single Dataverse export. Add optional companion 
 
 ## What you get
 
-| Page | What it answers |
-|---|---|
-| 📈 **Organization Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
-| 🎯 **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
-| ⏱ **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
-| 💼 **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
-| �� **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
-| 💬 **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
-| 📖 **Metric Glossary** | Every metric defined, calculated, and sourced — no black boxes |
+| # | Page | What it answers |
+|---|---|---|
+| 1 | **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
+| 2 | **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
+| 3 | **Organization Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
+| 4 | **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
+| 5 | **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
+| 6 | **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
+| 7 | **Metric Glossary** | Every metric defined, calculated, and sourced — no black boxes |
 
 ---
 
