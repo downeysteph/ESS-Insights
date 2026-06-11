@@ -55,7 +55,7 @@ If your ESS agent runs in one of these environments, this template won't have da
 
 ## Step 2 — Download the template
 
-1. From this repo, click **[`ESS Dashboard Template.pbit`](./ESS%20Dashboard%20Template.pbit)**.
+1. From this repo, click **[`ESS Dashboard Template (CSV Upload).pbit`](./ESS%20Dashboard%20Template%20(CSV%20Upload).pbit)**.
 2. Click **Download raw file** (top right of the file preview).
 3. Double-click the downloaded `.pbit` to open it in Power BI Desktop.
 
