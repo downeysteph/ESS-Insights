@@ -84,6 +84,8 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 3. **Export the data**
    - In the top menu bar, select **Export** → **Export data**
    - Wait a few minutes for the export to compile (status banner at the top)
+     <img width="1076" height="338" alt="image" src="https://github.com/user-attachments/assets/641af579-c88a-487a-8477-29286fdda999" />
+
 
 4. **Download the file**
    - When the status shows ready, click **Download exported data**
