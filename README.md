@@ -6,9 +6,11 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 
 > 💡 Built for ESS, but works for **any Copilot Studio agent** — the same template will load and analyze transcripts from any agent (HR, IT, sales enablement, custom). See [Customize for your agent](#customize-for-your-agent).
 
+![ESS Insights — animated preview of all 7 dashboard pages](images/dashboard-preview.gif)
+
 ---
 
-## What the dashboard looks like
+## All 7 pages at a glance
 
 | | |
 |---|---|
