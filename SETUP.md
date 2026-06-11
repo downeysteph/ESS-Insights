@@ -68,13 +68,15 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 **Where to get it** (pick one):
 
 - 🅰️ **From HR** — most HR systems can export a roster CSV with the columns above
-- 🅱️ **From Entra ID** — a 30-second PowerShell command:
-  ```powershell
-  Connect-MgGraph -Scopes "User.Read.All"
-  Get-MgUser -All -Property UserPrincipalName,Department,JobTitle,Country,DisplayName,Mail |
-    Select-Object UserPrincipalName,Department,JobTitle,Country,DisplayName,@{N='Email';E={$_.Mail}} |
-    Export-Csv -Path "C:\Users\<you>\Documents\AgentData\OrgData.csv" -NoTypeInformation
-  ```
+- 🅱️ **From the Microsoft 365 Admin Center** — point-and-click, no scripting needed:
+  1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) with a Global Reader, User Admin, or Global Admin role.
+  2. In the left navigation, select **Users → Active users**.
+  3. On the **Active users** page, click **Export users** in the top command bar.
+  4. In the confirmation dialog, click **Confirm**. A CSV file downloads to your browser's default downloads folder (it may take a minute for large tenants).
+  5. Open the downloaded CSV and confirm it includes the columns `User principal name`, `Department`, `Job Title`, `Country or region`, `Display name`, and `Email`. (Column names differ slightly from what the template expects — that's fine, the template normalizes them.)
+  6. Move/rename the file to your data folder, e.g. `Documents/AgentData/OrgData.csv`.
+
+  > 💡 The export contains every licensed user in your tenant. If your ESS agent is scoped to a subset (e.g. one country or one business unit), you can leave the file as-is — the template only joins rows whose UPN actually appears in your transcripts.
 - 🅲 **Skip for now** — the template still loads. You can add Org Data later via *Transform data → Edit Parameters*.
 
 ---

@@ -56,9 +56,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 ## Before you start
 
 ✅ **Power BI Desktop** installed — [download free](https://powerbi.microsoft.com/desktop/)
-
 ✅ **Bot Transcript Viewer** security role on the Dataverse environment that hosts your ESS agent — an admin must grant this. [Microsoft's how-to](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots#assign-the-bot-transcript-viewer-security-role-during-agent-sharing)
-
 ✅ A folder you'll use to store the CSVs (e.g. `Documents/AgentData`)
 
 > ⚠️ **Environment Maker is NOT enough.** Without the Bot Transcript Viewer role, you won't see the ConversationTranscript table in Step 1.
@@ -78,14 +76,10 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
    - Click **All** at the top of the table list
    - In the search box, type `conversation`
    - Click the **ConversationTranscript** table to open it
-     <img width="1313" height="581" alt="image" src="https://github.com/user-attachments/assets/cfe34e89-2c35-43bf-93c2-4d5a7dea15a2" />
-
 
 3. **Export the data**
    - In the top menu bar, select **Export** → **Export data**
    - Wait a few minutes for the export to compile (status banner at the top)
-     <img width="1076" height="338" alt="image" src="https://github.com/user-attachments/assets/641af579-c88a-487a-8477-29286fdda999" />
-
 
 4. **Download the file**
    - When the status shows ready, click **Download exported data**
@@ -123,13 +117,15 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 **Where to get it** (pick one):
 
 - 🅰️ **From HR** — most HR systems can export a roster CSV with the columns above
-- 🅱️ **From Entra ID** — a 30-second PowerShell command:
-  ```powershell
-  Connect-MgGraph -Scopes "User.Read.All"
-  Get-MgUser -All -Property UserPrincipalName,Department,JobTitle,Country,DisplayName,Mail |
-    Select-Object UserPrincipalName,Department,JobTitle,Country,DisplayName,@{N='Email';E={$_.Mail}} |
-    Export-Csv -Path "C:\Users\<you>\Documents\AgentData\OrgData.csv" -NoTypeInformation
-  ```
+- 🅱️ **From the Microsoft 365 Admin Center** — point-and-click, no scripting needed:
+  1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) with a Global Reader, User Admin, or Global Admin role.
+  2. In the left navigation, select **Users → Active users**.
+  3. On the **Active users** page, click **Export users** in the top command bar.
+  4. In the confirmation dialog, click **Confirm**. A CSV file downloads to your browser's default downloads folder (it may take a minute for large tenants).
+  5. Open the downloaded CSV and confirm it includes the columns `User principal name`, `Department`, `Job Title`, `Country or region`, `Display name`, and `Email`. (Column names differ slightly from what the template expects — that's fine, the template normalizes them.)
+  6. Move/rename the file to your data folder, e.g. `Documents/AgentData/OrgData.csv`.
+
+  > 💡 The export contains every licensed user in your tenant. If your ESS agent is scoped to a subset (e.g. one country or one business unit), you can leave the file as-is — the template only joins rows whose UPN actually appears in your transcripts.
 - 🅲 **Skip for now** — the template still loads. You can add Org Data later via *Transform data → Edit Parameters*.
 
 ---
@@ -238,7 +234,6 @@ Save this as a sticky note:
 - 🐛 [Open an issue](https://github.com/downeysteph/ESS-Insights/issues)
 - 🩺 Check the **Load Diagnostics** page (in the page selector) for row counts and parser warnings
 - 📖 The **Metric Glossary** page has every measure's definition and source
-
 
 </details>
 
