@@ -78,6 +78,8 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
    - Click **All** at the top of the table list
    - In the search box, type `conversation`
    - Click the **ConversationTranscript** table to open it
+     <img width="1313" height="581" alt="image" src="https://github.com/user-attachments/assets/cfe34e89-2c35-43bf-93c2-4d5a7dea15a2" />
+
 
 3. **Export the data**
    - In the top menu bar, select **Export** → **Export data**
