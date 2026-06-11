@@ -56,7 +56,9 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 ## Before you start
 
 ✅ **Power BI Desktop** installed — [download free](https://powerbi.microsoft.com/desktop/)
+
 ✅ **Bot Transcript Viewer** security role on the Dataverse environment that hosts your ESS agent — an admin must grant this. [Microsoft's how-to](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots#assign-the-bot-transcript-viewer-security-role-during-agent-sharing)
+
 ✅ A folder you'll use to store the CSVs (e.g. `Documents/AgentData`)
 
 > ⚠️ **Environment Maker is NOT enough.** Without the Bot Transcript Viewer role, you won't see the ConversationTranscript table in Step 1.
