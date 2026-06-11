@@ -12,7 +12,7 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 
 ## Why use this template for your ESS agent
 
-The Microsoft ESS agent gives your employees a single, conversational front door to HR, IT, payroll, benefits, and travel self-service. But the platform gives you *transcripts*, not insights. This template answers the questions an ESS program owner needs to answer every month:
+The Microsoft ESS agent gives your employees a single, conversational front door to HR, IT, payroll, benefits, and travel self-service. But the platform gives you *nested data*, not insights. This template answers the questions an ESS program owner needs to answer every month:
 
 - **Are employees adopting it?** Distinct users, repeat usage, DAU/WAU/MAU trend
 - **Is it actually resolving their requests?** Resolution vs. escalation vs. abandonment rates, by topic
@@ -21,7 +21,7 @@ The Microsoft ESS agent gives your employees a single, conversational front door
 - **Are employees happy with it?** In-conversation thumbs, CSAT, verbatim comments
 - **Which intents need authoring help?** Per-topic deflection, abandonment, and outcomes
 
-All seven pages light up from a single Dataverse export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
+All seven pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
 
 ---
 
