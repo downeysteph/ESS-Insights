@@ -16,17 +16,40 @@ A 10-minute walkthrough to get the ESS Insights dashboard running on your own Co
 
 ## Step 1 — Export your conversation transcripts
 
-This is the **only required** file.
+This is the **only required** file. The transcripts live in a Dataverse table called `ConversationTranscript` that Copilot Studio writes to automatically. You export them through the Power Apps maker portal.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/) and switch to the environment that hosts your Copilot Studio agent.
-2. In the left nav, open **Tables** → search for **ConversationTranscript**.
-3. Click **Export** → **Export data** → **CSV**.
-4. Wait for the export job to finish, then download the resulting CSV.
-5. Save it somewhere you'll remember, e.g.:
+> **Heads up — you need the right security role.** Environment Maker alone is *not* enough. You (or someone) need the **Bot Transcript Viewer** security role assigned in the environment that hosts your ESS agent. An admin can grant this via *Admin center → Environment → Settings → Users + permissions → Security roles*. See [Microsoft's docs](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots#assign-the-bot-transcript-viewer-security-role-during-agent-sharing) for the official walkthrough.
+
+### Steps
+
+1. Sign in to [https://make.powerapps.com](https://make.powerapps.com/) and use the environment selector (top-right) to switch to the environment that hosts your ESS agent.
+2. In the left navigation pane, select **Tables**, then **All** at the top of the table list.
+3. In the **Search** box, type `conversation`.
+4. Select the **ConversationTranscript** table to open it.
+5. On the top menu bar, select **Export** → **Export data**.
+6. Wait a few minutes while Power Apps compiles the data (you'll see a status indicator at the top).
+7. When the status changes to ready, select **Download exported data**. Your browser downloads a `.zip` archive to its default downloads folder.
+8. Unzip the archive. Inside you'll find the transcripts as a `.csv` file (it may have a long auto-generated name like `ConversationTranscript_2026-06-11.csv`).
+9. Move/rename the CSV to a stable location you'll point Power BI at, e.g.:
    - **Windows:** `C:\Users\<you>\Documents\AgentData\ConversationTranscripts.csv`
    - **Mac:** `/Users/<you>/Documents/AgentData/ConversationTranscripts.csv`
 
-> ⚠️ **Do NOT open this CSV in Excel before loading it into Power BI.** Excel will silently corrupt the embedded JSON columns and you'll get an `M Engine error: Token Identifier expected` when Power BI tries to parse it. If you accidentally opened it, just re-download from Dataverse.
+### What you're getting
+
+- **Default window:** the last 30 days of conversations (configurable in your environment's retention settings).
+- **One row per conversation segment.** The system saves a transcript record after 30 minutes of inactivity. Very long conversations (>1 MB of activity) are split across multiple rows sharing the same `Name` and `ConversationStartTime`. The template handles this re-assembly for you.
+- **Key columns**: `Content` (the full JSON activity log — message, event, trace), `ConversationStartTime`, `Metadata` (agent/tenant IDs), and `Name`. The template parses `Content` to extract messages, user identity, topics, outcomes, response times, and feedback.
+
+### What's NOT in the export
+
+Per Microsoft's documentation, transcripts are **not** written for:
+- Microsoft Dataverse for Teams environments
+- Dataverse developer environments
+- Microsoft 365 Copilot agents
+
+If your ESS agent runs in one of these environments, this template won't have data to load. Confirm your agent runs in a standard Dataverse production or sandbox environment.
+
+> ⚠️ **CRITICAL — do NOT open this CSV in Excel before loading it into Power BI.** Excel silently corrupts the embedded JSON in the `Content` column when it re-saves the file. You'll get an `M Engine error: Token Identifier expected` when Power BI tries to parse it. If you accidentally opened and saved it, just re-download from Dataverse — don't try to repair it manually.
 
 ---
 
