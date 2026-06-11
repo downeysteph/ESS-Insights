@@ -130,16 +130,58 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ---
 
-## Step 3 — (Optional) Export Product Feedback & Agent Credits
+## Step 3 — (Optional) Export Product Feedback
 
-**Outcome:** unlocks the Agent Feedback and Business Impact pages.
+**Outcome:** unlocks the Agent Feedback page with thumbs up/down, star ratings, and verbatim user comments.
 
-| File | Source | Unlocks |
-|---|---|---|
-| **Product Feedback** | Power Apps → Tables → `ProductFeedback` → Export → Export data (same flow as Step 1) | Thumbs up/down, CSAT scores, verbatim comments page |
-| **Agent Credits** | Copilot Studio → **Analytics → Message Consumption** → Export | Credit-consumption leaderboard, Business Impact metrics |
+### What this data provides
 
-Save each as a CSV in your data folder. You can skip both and add them later.
+The Product Feedback report captures in-product satisfaction signals submitted by users directly within Microsoft 365 Copilot experiences (thumbs up/down, star ratings, and free-text comments). This adds a qualitative and sentiment layer that complements the quantitative usage data from your transcripts.
+
+### Requirements
+
+- **Access level:** **Global Administrator** or **Reports Reader**
+- **Portal:** Microsoft 365 Admin Center
+- **Permissions:** Access to Health reports
+
+### Step-by-step instructions
+
+1. **Navigate to the portal** — Go to [admin.microsoft.com](https://admin.microsoft.com/)
+2. **Sign in** as a **Global Administrator** or **Reports Reader**
+3. **Open the Health section** — In the left navigation, click **Health**
+4. Select **Product feedback**
+5. **Filter to Copilot feedback** — Use the **Product** filter to select **Microsoft 365 Copilot** (and optionally Copilot Studio or individual apps)
+6. Set a **Date range** matching your audit log period
+7. **Export the data** — Click the **Export** button or the ellipsis (`...`) menu → **Export data**
+8. Download as CSV
+9. Save to a known location, e.g.:
+   - **Windows:** `C:\Data\Copilot_Feedback.csv`
+   - **Mac:** `/Users/<you>/Documents/AgentData/Copilot_Feedback.csv`
+
+### Expected file format
+
+- **File format:** CSV
+- **Columns:** Date, UserPrincipalName (if unmasked), Product, Feedback type (positive/negative), Rating, Verbatim comment (where provided)
+- **Rows:** One row per feedback submission
+
+> ⚠️ **Privacy note:** User-level feedback may be anonymized depending on your tenant's reporting privacy settings. To see user-level data, ensure **"Display concealed user names in all reports"** is **disabled** under **Settings → Org Settings → Reports**.
+
+> 💡 **Why it matters:** Feedback data enables sentiment trend analysis and correlation between usage frequency and satisfaction — helping identify which experiences are delighting vs. frustrating users.
+
+📖 **Learn more:** [Microsoft 365 product feedback reports – Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control)
+
+---
+
+## Step 3b — (Optional) Export Agent Credits
+
+**Outcome:** unlocks the Business Impact page's credit-consumption leaderboard.
+
+1. Sign in to [Copilot Studio](https://copilotstudio.microsoft.com) and open your ESS agent.
+2. In the left navigation, select **Analytics** → **Message Consumption**.
+3. Apply a date range matching your transcripts export.
+4. Click **Export** and save the resulting CSV to your data folder, e.g. `Documents/AgentData/AgentCredits.csv`.
+
+You can skip both Step 3 files and add them later — the template loads cleanly without them.
 
 ---
 
