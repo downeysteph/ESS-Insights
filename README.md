@@ -10,21 +10,6 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 
 ---
 
-## All 7 pages at a glance
-
-| | |
-|---|---|
-| ![1 — Organization Adoption](images/01-organization-adoption.png) | ![2 — Conversation Outcomes](images/04-conversation-outcomes.png) |
-| **1 — Organization Adoption** | **2 — Conversation Outcomes** |
-| ![3 — Time to Knowledge](images/02-time-to-knowledge.png) | ![4 — Business Impact](images/03-business-impact.png) |
-| **3 — Time to Knowledge** | **4 — Business Impact** |
-| ![5 — Agent Feedback](images/05-agent-feedback.png) | ![6 — Conversation Details](images/06-conversation-details.png) |
-| **5 — Agent Feedback** | **6 — Conversation Details** |
-| ![7 — Metric Glossary](images/07-metric-glossary.png) | |
-| **7 — Metric Glossary** | |
-
----
-
 ## Why use this template for your ESS agent
 
 The Microsoft ESS agent gives your employees a single, conversational front door to HR, IT, payroll, benefits, and travel self-service. But the platform gives you *transcripts*, not insights. This template answers the questions an ESS program owner needs to answer every month:
