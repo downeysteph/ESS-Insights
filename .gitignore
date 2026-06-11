@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.pbix
+.cache/
+.pbitemp/
+Data Files/
+*.csv
+*.xlsx
+!images/*.png
+.vscode/
+.idea/
