@@ -2,7 +2,7 @@
 
 Get the **ESS Insights dashboard** running on your own Copilot Studio agent data, **connected live to Dataverse** — no CSV exports, no file paths, no manual refresh shuffle.
 
-> 💡 **Which version is this?** This is the **Dataverse Direct** template. It pulls `conversationtranscript` rows straight from the Dataverse environment that hosts your agent. If you'd rather work with a one-time CSV export, use the [CSV Upload guide](./SETUP.md) instead.
+> 💡 **Which version is this?** This is the **Dataverse Direct** template. It pulls `conversationtranscript` rows straight from the Dataverse environment that hosts your agent. If you'd rather work with a one-time CSV export, use the [CSV Upload guide](./SETUP-CSV-Download.md) instead.
 
 ---
 
@@ -61,7 +61,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ## Step 3 — (Optional) Export Product Feedback
 
-Identical to the CSV Upload version. Follow [Step 3 in the CSV Upload guide](./SETUP.md#step-3--optional-export-product-feedback) and save the file at e.g. `Documents/AgentData/Copilot_Feedback.csv`.
+Identical to the CSV Upload version. Follow [Step 3 in the CSV Upload guide](./SETUP-CSV-Download.md#step-3--optional-export-product-feedback) and save the file at e.g. `Documents/AgentData/Copilot_Feedback.csv`.
 
 ---
 

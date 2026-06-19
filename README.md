@@ -279,7 +279,7 @@ Save this as a sticky note:
 
 </details>
 
-> Prefer a standalone page? See [SETUP.md](./SETUP.md).
+> Prefer a standalone page? See [SETUP-CSV-Download.md](./SETUP-CSV-Download.md).
 
 ---
 
@@ -306,7 +306,7 @@ Save this as a sticky note:
 | "Users by Country" chart shows "Something's wrong with one or more fields" | Your Org Data CSV is missing the Country column | Add a `Country` column to your Org Data file (it can be empty), or re-download the latest template |
 | Repeat-usage rate is 0% | Period is too short (everyone is a first-time user) | Widen the date filter, or wait for more data |
 
-Full validation checklist: [SETUP.md § Validation](./SETUP.md#step-5--validation)
+Full validation checklist: [SETUP-CSV-Download.md § Validation](./SETUP-CSV-Download.md#step-5--validation)
 
 ---
 
