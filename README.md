@@ -63,7 +63,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 | File | Required? | Unlocks |
 |---|---|---|
-| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | All adoption, outcomes, time-to-knowledge, **and in-conversation thumbs/CSAT feedback** |
+| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
 | **Org Data** (HR roster CSV: UPN, Department, JobTitle, Country) | ⭐ Recommended | "Users by Organization" and "Users by Country" breakouts on every page |
 | **Agent Credits** (Copilot Studio usage export) | Optional | Credit consumption leaderboard and Business Impact page |
 
