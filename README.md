@@ -52,7 +52,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard Template (CSV Upload).pbit`](./ESS%20Dashboard%20Template%20(CSV%20Upload).pbit) | *Coming soon — `ESS Dashboard Template (Dataverse Direct).pbit`* |
+| **Get the template** | [`ESS Dashboard Template (CSV Upload).pbit`](./ESS%20Dashboard%20Template%20(CSV%20Upload).pbit) | [`ESS Dashboard Template (Dataverse Direct).pbit`](./ESS%20Dashboard%20Template%20(Dataverse%20Direct).pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
@@ -63,9 +63,8 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 | File | Required? | Unlocks |
 |---|---|---|
-| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | All adoption, outcomes, time-to-knowledge, and conversation-detail metrics |
+| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | All adoption, outcomes, time-to-knowledge, **and in-conversation thumbs/CSAT feedback** |
 | **Org Data** (HR roster CSV: UPN, Department, JobTitle, Country) | ⭐ Recommended | "Users by Organization" and "Users by Country" breakouts on every page |
-| **Product Feedback** (Dataverse export) | Optional | Thumbs up/down, CSAT, verbatim comments page |
 | **Agent Credits** (Copilot Studio usage export) | Optional | Credit consumption leaderboard and Business Impact page |
 
 > The template **will load and render every page without errors** even if you provide only the required transcripts file. Optional pages and breakouts will show blank where data is missing — by design, so you can start with the minimum and add more later.
