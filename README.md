@@ -39,6 +39,99 @@ All seven pages light up from a single Power Platform export. Add optional compa
 
 ---
 
+## Before you start — Prerequisites
+
+Before you run the dashboard against a real agent, walk through this checklist. Most of the **"my data is blank"** issues come from one of these being missed.
+
+### 1. Power BI Desktop installed
+
+- **Required.** The `.pbit` template opens in Power BI Desktop on **Windows only**. Mac users need a Windows VM or Parallels.
+- **Download:** [aka.ms/pbidesktop](https://aka.ms/pbidesktop) (free) or install from the Microsoft Store.
+- **Version:** Any release from the last 6 months. The template uses standard connectors only.
+
+> 💡 If your customer doesn't have it installed, you'll need to reschedule — install takes 5–10 min plus a sign-in.
+
+### 2. Permission roles
+
+Different parts of the dashboard need different roles. Confirm the right person has the right access **before** the working session.
+
+| Data | Required role(s) | Where assigned |
+|---|---|---|
+| **Conversation transcripts** (CSV Upload path) | **System Administrator**, **System Customizer**, or **Bot Transcript Viewer** on the Dataverse environment hosting the agent | Power Platform Admin Center → Environment → Settings → Users + permissions → Security roles |
+| **Conversation transcripts** (Dataverse Direct path) | Same as above — **Bot Transcript Viewer** is the minimum | Same as above |
+| **Org Data CSV** *(recommended)* | **Global Reader**, **User Administrator**, or **Global Administrator** | Microsoft 365 Admin Center → Roles |
+| **Agent Credits CSV** *(optional)* | **Copilot Studio Administrator** for the agent's environment | Copilot Studio → agent → Settings → Permissions |
+| **Verifying transcripts in Dataverse** | **Environment Maker** + ability to read the `bot` and `conversationtranscript` tables | Same as transcripts above |
+| **Extending Dataverse retention** *(see §4)* | **System Administrator** on the environment | Power Platform Admin Center |
+
+> ⚠️ `Environment Maker` alone is **not enough** to read transcripts. Customers often have this and assume they're covered — they aren't.
+
+### 3. Supported environment types
+
+Copilot Studio agents can live in different environment types. **Only some of them persist transcripts to Dataverse** — which is what this dashboard reads.
+
+| Environment type | Transcripts written to Dataverse? | Use with this dashboard? |
+|---|---|---|
+| **Production** | ✅ Yes | ✅ Yes |
+| **Sandbox** | ✅ Yes | ✅ Yes |
+| **Default** *(per-tenant)* | ✅ Yes | ✅ Yes |
+| **Developer** *(per-user)* | ⚠️ Yes, but only your own conversations | ⚠️ Demo only — not multi-user analytics |
+| **Microsoft Teams environment** | ❌ No — transcripts are not persisted | ❌ Not supported |
+| **Microsoft 365 Copilot environment** | ❌ No | ❌ Not supported |
+
+**How to check your environment type:**
+1. Power Platform Admin Center → **Environments** → click the env hosting the agent.
+2. The **Type** column (or the env detail page) shows Production / Sandbox / Default / Developer / Teams.
+3. If it's Teams or M365 Copilot, the agent needs to be **moved or republished** to a Production or Sandbox env to enable transcript analytics.
+
+### 4. Agent configuration
+
+These toggles control **what** gets written to the transcript. With them off, transcripts are still saved, but most dashboard metrics will look blank.
+
+#### a) Enable conversation transcripts
+
+1. Open the agent in [Copilot Studio](https://copilotstudio.microsoft.com).
+2. **Settings** (top right) → **Advanced** → **Conversation transcripts**.
+3. Confirm **"Save conversation transcripts to Dataverse"** is **ON**.
+4. **Save / publish** the agent.
+
+#### b) Include node-level details *(critical for this dashboard)*
+
+1. Same Settings page → scroll to **Enhance Transcripts**.
+2. Turn **"Include node-level details in transcripts"** **ON**.
+3. **Save / publish** the agent.
+
+> Without this, the dashboard's topic detection, turn counts, durations, and outcome classification will all be blank.
+
+#### c) Don't conceal user names *(only matters if you want per-user analytics)*
+
+1. Microsoft 365 Admin Center → **Settings** → **Org settings** → **Reports**.
+2. **Uncheck** "Display concealed user names in all reports."
+3. Otherwise UPNs in transcripts come back as anonymized hashes and Org Data joins will fail.
+
+> ⏱ **Important:** These settings only affect **future** conversations. Historical transcripts written while a toggle was off won't backfill. Run a few test conversations after enabling them, wait 2–5 minutes, then refresh the dashboard.
+
+### 5. Dataverse retention window
+
+By default, Dataverse **automatically deletes conversation transcripts after 30 days** via a system bulk-deletion job. If you want a longer history window:
+
+**Option A — Extend retention via the Copilot Studio agent setting**
+1. Copilot Studio → agent → **Settings** → **Advanced** → **Conversation transcripts**.
+2. Set **"Number of days to retain transcripts"** to the desired value (max varies by tenant; commonly up to 365).
+3. **Save / publish**.
+
+**Option B — Modify the Dataverse bulk-delete job** *(requires System Administrator)*
+1. Power Platform Admin Center → **Environments** → click the env → **Settings** → **Data management** → **Bulk record deletion**.
+2. Find the recurring job named something like **"Bulk delete conversation transcripts older than 30 days"**.
+3. **Edit** → change the date filter (e.g. `older than 90 days`) or **deactivate** the job.
+4. **Save**.
+
+> 💡 **Plan ahead.** If a customer wants 12 months of trend in the dashboard, retention must already have been extended **12 months ago**. You can't backfill deleted transcripts.
+
+📖 **Learn more:** [Manage conversation transcript retention — Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-transcripts-powerapps)
+
+---
+
 ## Quick start — choose your path
 
 This dashboard ships in **two flavors**. Pick the one that matches how you want to refresh your data:
