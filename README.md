@@ -66,7 +66,7 @@ Quick checklist — confirm all four before your working session. Click each ite
 
 ## Prerequisites — details
 
-<details open>
+<details>
 <summary><strong>Click to expand — full prerequisites reference</strong></summary>
 
 ### 1. Power BI Desktop installed
@@ -165,7 +165,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 ## Data inputs
 
-<details open>
+<details>
 <summary><strong>Click to expand — required & optional files, roles, and what each unlocks</strong></summary>
 
 | File | Required? | Required role(s) | Unlocks |
