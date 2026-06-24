@@ -49,22 +49,7 @@ Before you run the dashboard against a real agent, walk through this checklist.
 - **Download:** [Download PowerBI for free](https://www.microsoft.com/en-us/download/details.aspx?id=58494&msockid=2488193a4d40616c33750f9a4c3760f0)(Download PBI) (free) or install from the Microsoft Store.
 - **Version:** Any release from the last 6 months. The template uses standard connectors only.
 
-### 2. Permission roles
-
-Different parts of the dashboard need different roles. Confirm the right person has the right access **before** the working session.
-
-| Data | Required role(s) | Where assigned |
-|---|---|---|
-| **Conversation transcripts** (CSV Upload path) | **System Administrator**, **System Customizer**, or **Bot Transcript Viewer** on the Dataverse environment hosting the agent | Power Platform Admin Center → Environment → Settings → Users + permissions → Security roles |
-| **Conversation transcripts** (Dataverse Direct path) | Same as above — **Bot Transcript Viewer** is the minimum | Same as above |
-| **Org Data CSV** *(recommended)* | **Global Reader**, **User Administrator**, or **Global Administrator** | Microsoft 365 Admin Center → Roles |
-| **Agent Credits CSV** *(optional)* | **Copilot Studio Administrator** for the agent's environment | Copilot Studio → agent → Settings → Permissions |
-| **Verifying transcripts in Dataverse** | **Environment Maker** + ability to read the `bot` and `conversationtranscript` tables | Same as transcripts above |
-| **Extending Dataverse retention** *(see §4)* | **System Administrator** on the environment | Power Platform Admin Center |
-
-> ⚠️ `Environment Maker` alone is **not enough** to read transcripts. Customers often have this and assume they're covered — they aren't.
-
-### 3. Supported environment types
+### 2. Supported environment types
 
 Copilot Studio agents can live in different environment types. **Only some of them persist transcripts to Dataverse** — which is what this dashboard reads.
 
@@ -82,7 +67,7 @@ Copilot Studio agents can live in different environment types. **Only some of th
 2. The **Type** column (or the env detail page) shows Production / Sandbox / Default / Developer / Teams.
 3. If it's Teams or M365 Copilot, the agent needs to be **moved or republished** to a Production or Sandbox env to enable transcript analytics.
 
-### 4. Agent configuration
+### 3. Agent configuration
 
 These toggles control **what** gets written to the transcript. With them off, transcripts are still saved, but most dashboard metrics will look blank.
 
@@ -109,7 +94,7 @@ These toggles control **what** gets written to the transcript. With them off, tr
 
 > ⏱ **Important:** These settings only affect **future** conversations. Historical transcripts written while a toggle was off won't backfill. Run a few test conversations after enabling them, wait 2–5 minutes, then refresh the dashboard.
 
-### 5. Dataverse retention window
+### 4. Dataverse retention window
 
 By default, Dataverse **automatically deletes conversation transcripts after 30 days** via a system bulk-deletion job. If you want a longer history window:
 
@@ -152,11 +137,15 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 ## Data inputs
 
-| File | Required? | Unlocks |
-|---|---|---|
-| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
-| **Org Data** (HR roster CSV: UPN, Department, JobTitle, Country) | ⭐ Recommended | "Users by Organization" and "Users by Country" breakouts on every page |
-| **Agent Credits** (Copilot Studio usage export) | Optional | Credit consumption leaderboard and Business Impact page |
+| File | Required? | Required role(s) | Unlocks |
+|---|---|---|---|
+| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | **System Administrator**, **System Customizer**, or **Bot Transcript Viewer** on the Dataverse environment hosting the agent | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
+| **Org Data** (HR roster CSV: UPN, Department, JobTitle, Country) | ⭐ Recommended | **Global Reader**, **User Administrator**, or **Global Administrator** (Microsoft 365 Admin Center) | "Users by Organization" and "Users by Country" breakouts on every page |
+| **Agent Credits** (Copilot Studio usage export) | Optional | **Copilot Studio Administrator** for the agent's environment | Credit consumption leaderboard and Business Impact page |
+
+> ⚠️ **`Environment Maker` alone is not enough** to read transcripts. Customers often have this role and assume they're covered — they aren't. Grant **Bot Transcript Viewer** (or higher) explicitly.
+
+> 💡 Roles are assigned in **Power Platform Admin Center → Environment → Settings → Users + permissions → Security roles** (Dataverse / Copilot Studio roles) or **Microsoft 365 Admin Center → Roles** (M365 roles). Extending Dataverse retention (see [Prerequisites §4](#4-dataverse-retention-window)) requires **System Administrator** on the environment.
 
 > The template **will load and render every page without errors** even if you provide only the required transcripts file. Optional pages and breakouts will show blank where data is missing — by design, so you can start with the minimum and add more later.
 
