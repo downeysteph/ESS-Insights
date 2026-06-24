@@ -41,15 +41,13 @@ All seven pages light up from a single Power Platform export. Add optional compa
 
 ## Before you start — Prerequisites
 
-Before you run the dashboard against a real agent, walk through this checklist. Most of the **"my data is blank"** issues come from one of these being missed.
+Before you run the dashboard against a real agent, walk through this checklist. 
 
 ### 1. Power BI Desktop installed
 
 - **Required.** The `.pbit` template opens in Power BI Desktop on **Windows only**. Mac users need a Windows VM or Parallels.
 - **Download:** [aka.ms/pbidesktop](https://aka.ms/pbidesktop) (free) or install from the Microsoft Store.
 - **Version:** Any release from the last 6 months. The template uses standard connectors only.
-
-> 💡 If your customer doesn't have it installed, you'll need to reschedule — install takes 5–10 min plus a sign-in.
 
 ### 2. Permission roles
 
