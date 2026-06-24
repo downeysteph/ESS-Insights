@@ -4,6 +4,8 @@
 
 A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with a 7-page executive dashboard that answers the questions HR, IT, and the executive sponsor will actually ask after launch.
 
+> 📊 **Data source:** This report leverages the **`ConversationTranscript` Dataverse table** that Copilot Studio writes for every agent conversation. No custom logging, no extra pipelines — just the data your agent already produces.
+
 > 💡 Built for ESS, but works for **any Copilot Studio agent** — the same template will load and analyze transcripts from any agent (HR, IT, sales enablement, custom). See [Customize for your agent](#customize-for-your-agent).
 
 ![ESS Insights — animated preview of all 7 dashboard pages](images/dashboard-preview.gif)
@@ -11,6 +13,9 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 ---
 
 ## Why use this template for your ESS agent
+
+<details>
+<summary><strong>Click to expand</strong></summary>
 
 The Microsoft ESS agent gives your employees a single, conversational front door to HR, IT, payroll, benefits, and travel self-service. But the platform gives you *nested data*, not insights. This template answers the questions an ESS program owner needs to answer every month:
 
@@ -23,9 +28,14 @@ The Microsoft ESS agent gives your employees a single, conversational front door
 
 All seven pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
 
+</details>
+
 ---
 
 ## What you get
+
+<details>
+<summary><strong>Click to expand — 7-page dashboard overview</strong></summary>
 
 | # | Page | What it answers |
 |---|---|---|
@@ -36,6 +46,8 @@ All seven pages light up from a single Power Platform export. Add optional compa
 | 5 | **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
 | 6 | **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
 | 7 | **Metric Glossary** | Every metric defined, calculated, and sourced — no black boxes |
+
+</details>
 
 ---
 
@@ -53,6 +65,9 @@ Quick checklist — confirm all four before your working session. Click each ite
 ---
 
 ## Prerequisites — details
+
+<details>
+<summary><strong>Click to expand — full prerequisites reference</strong></summary>
 
 ### 1. Power BI Desktop installed
 
@@ -124,6 +139,8 @@ By default, Dataverse **automatically deletes conversation transcripts after 30 
 
 📖 **Learn more:** [Manage conversation transcript retention — Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-transcripts-powerapps)
 
+</details>
+
 ---
 
 ## Quick start — choose your path
@@ -148,6 +165,9 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 ## Data inputs
 
+<details>
+<summary><strong>Click to expand — required & optional files, roles, and what each unlocks</strong></summary>
+
 | File | Required? | Required role(s) | Unlocks |
 |---|---|---|---|
 | **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | **Bot Transcript Viewer** (minimum, least-privilege) — or any role with Read on the `conversationtranscript` table. **System Administrator** always works. **System Customizer** usually works but isn't guaranteed; assign Bot Transcript Viewer alongside it to be safe. | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
@@ -160,9 +180,14 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 > The template **will load and render every page without errors** even if you provide only the required transcripts file. Optional pages and breakouts will show blank where data is missing — by design, so you can start with the minimum and add more later.
 
+</details>
+
 ---
 
 ## Validation & troubleshooting
+
+<details>
+<summary><strong>Click to expand — common issues and fixes</strong></summary>
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
@@ -174,9 +199,14 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 Full validation checklist: see the **Validate before sharing** step in either setup guide ([CSV Upload](./SETUP-CSV-Download.md#step-6--validate-before-sharing) &middot; [Dataverse Direct](./SETUP-Dataverse.md#step-7--validate-before-sharing)).
 
+</details>
+
 ---
 
 ## Customize for your agent
+
+<details>
+<summary><strong>Click to expand — repurpose this template for any Copilot Studio agent</strong></summary>
 
 While this template is purpose-built for the Microsoft ESS agent, the underlying data model works against **any Copilot Studio agent's transcripts**. To use it for a different agent (HR-only, IT helpdesk, sales enablement, custom internal agent):
 
@@ -187,17 +217,27 @@ While this template is purpose-built for the Microsoft ESS agent, the underlying
 
 No semantic-model edits required.
 
+</details>
+
 ---
 
 ## Distribute to your stakeholders
+
+<details>
+<summary><strong>Click to expand</strong></summary>
 
 - **Publish to Power BI Service** for a live, refreshable workspace report.
 - **Export to PDF** for monthly executive updates.
 - **Pin individual visuals** to a Teams dashboard for daily monitoring.
 
+</details>
+
 ---
 
 ## Storytelling tips
+
+<details>
+<summary><strong>Click to expand — how to present these numbers to execs</strong></summary>
 
 When presenting these numbers to a non-technical audience:
 
@@ -205,6 +245,8 @@ When presenting these numbers to a non-technical audience:
 - **Pair Outcomes with Topic Outcomes.** A 79% engagement rate means nothing without knowing *which* topics drove it.
 - **Use Verbatim Feedback as proof.** Two quotes from real employees beats a 4.1/5 CSAT score every time.
 - **Show the trend, not the snapshot.** The weekly trend visuals are your story arc — start there.
+
+</details>
 
 ---
 
