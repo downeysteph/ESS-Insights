@@ -39,9 +39,20 @@ All seven pages light up from a single Power Platform export. Add optional compa
 
 ---
 
-## Before you start — Prerequisites
+## Before you start
 
-Before you run the dashboard against a real agent, walk through this checklist. 
+Quick checklist — confirm all four before your working session. Click each item for details.
+
+- [ ] **Power BI Desktop installed** (Windows) — [details ↓](#1-power-bi-desktop-installed)
+- [ ] **Bot Transcript Viewer** role assigned (minimum) on the agent's Dataverse environment — [details ↓](#data-inputs)
+- [ ] **Agent environment is Production, Sandbox, or Default** *(not Teams or M365 Copilot)* — [details ↓](#2-supported-environment-types)
+- [ ] **Agent configured to capture transcripts + node-level details** — [details ↓](#3-agent-configuration)
+
+> 💡 If you're extending the default 30-day Dataverse history window, that has to be done **before** the data you want exists. See [Dataverse retention window ↓](#4-dataverse-retention-window).
+
+---
+
+## Prerequisites — details
 
 ### 1. Power BI Desktop installed
 
