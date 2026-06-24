@@ -46,7 +46,7 @@ Before you run the dashboard against a real agent, walk through this checklist.
 ### 1. Power BI Desktop installed
 
 - **Required.** The `.pbit` template opens in Power BI Desktop on **Windows only**. Mac users need a Windows VM or Parallels.
-- **Download:** [(https://www.microsoft.com/en-us/download/details.aspx?id=58494&msockid=2488193a4d40616c33750f9a4c3760f0)](Download PBI) (free) or install from the Microsoft Store.
+- **Download:** [Download PowerBI for free](https://www.microsoft.com/en-us/download/details.aspx?id=58494&msockid=2488193a4d40616c33750f9a4c3760f0)(Download PBI) (free) or install from the Microsoft Store.
 - **Version:** Any release from the last 6 months. The template uses standard connectors only.
 
 ### 2. Permission roles
