@@ -139,7 +139,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 
 | File | Required? | Required role(s) | Unlocks |
 |---|---|---|---|
-| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | **System Administrator**, **System Customizer**, or **Bot Transcript Viewer** on the Dataverse environment hosting the agent | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
+| **Conversation Transcripts** (Dataverse export from your ESS environment) | ✅ Required | **Bot Transcript Viewer** (minimum, least-privilege) — or any role with Read on the `conversationtranscript` table. **System Administrator** always works. **System Customizer** usually works but isn't guaranteed; assign Bot Transcript Viewer alongside it to be safe. | All adoption, outcomes, time-to-knowledge, and in-conversation thumbs/CSAT feedback |
 | **Org Data** (HR roster CSV: UPN, Department, JobTitle, Country) | ⭐ Recommended | **Global Reader**, **User Administrator**, or **Global Administrator** (Microsoft 365 Admin Center) | "Users by Organization" and "Users by Country" breakouts on every page |
 | **Agent Credits** (Copilot Studio usage export) | Optional | **Copilot Studio Administrator** for the agent's environment | Credit consumption leaderboard and Business Impact page |
 
