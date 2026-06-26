@@ -97,7 +97,7 @@ You can skip this step and add Agent Credits later — the template loads cleanl
 ## Step 4 — Download & open the template
 
 1. **Download the .pbit**
-   - In this repo, click **[`ESS Dashboard Template 1.3 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.3%20(CSV%20Upload).pbit)**
+   - In this repo, click **[`ESS Dashboard Template 1.4 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.4%20(CSV%20Upload).pbit)**
    - Click **Download raw file** (top-right of the file preview)
 
 2. **Open it**
