@@ -156,7 +156,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard Template 1.4 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.4%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.4 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.4%20(Dataverse).pbit) |
+| **Get the template** | [`ESS Dashboard Template 1.5 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.5%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.5 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.5%20(Dataverse).pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
