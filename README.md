@@ -2,13 +2,13 @@
 
 > **Measure the real-world impact of your Microsoft Employee Self-Service (ESS) Copilot Studio agent — adoption, outcomes, deflection, and user feedback — using only the data your agent already produces.**
 
-A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with a 7-page executive dashboard that answers the questions HR, IT, and the executive sponsor will actually ask after launch.
+A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with a 10-page executive dashboard that answers the questions HR, IT, and the executive sponsor will actually ask after launch.
 
 > 📊 **Data source:** This report leverages the **`ConversationTranscript` Dataverse table** that Copilot Studio writes for every agent conversation. No custom logging, no extra pipelines — just the data your agent already produces.
 
 > 💡 Built for ESS, but works for **any Copilot Studio agent** — the same template will load and analyze transcripts from any agent (HR, IT, sales enablement, custom). See [Customize for your agent](#customize-for-your-agent).
 
-![ESS Insights — animated preview of all 7 dashboard pages](images/dashboard-preview.gif)
+![ESS Insights — animated preview of the executive dashboard](images/dashboard-preview.gif)
 
 ---
 
@@ -33,7 +33,7 @@ The Microsoft ESS agent gives your employees a single, conversational front door
 - **Are employees happy with it?** In-conversation thumbs, CSAT, verbatim comments
 - **Which intents need authoring help?** Per-topic deflection, abandonment, and outcomes
 
-All seven pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
+All ten pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
 
 </details>
 
@@ -42,17 +42,20 @@ All seven pages light up from a single Power Platform export. Add optional compa
 ## What you get
 
 <details>
-<summary><strong>Click to expand — 7-page dashboard overview</strong></summary>
+<summary><strong>Click to expand — 10-page dashboard overview</strong></summary>
 
 | # | Page | What it answers |
 |---|---|---|
-| 1 | **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
-| 2 | **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
-| 3 | **Organization Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
-| 4 | **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
+| 1 | **Measuring Value Over Time** | Value model: how adoption, operational efficiency, outcomes, productivity, and quality translate into measurable business value over time |
+| 2 | **Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
+| 3 | **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
+| 4 | **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
 | 5 | **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
 | 6 | **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
-| 7 | **Metric Glossary** | Every metric defined, calculated, and sourced — no black boxes |
+| 7 | **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
+| 8 | **Improvement Opportunities** | Which intents need authoring help — per-topic deflection, abandonment, and outcomes to prioritize |
+| 9 | **📖 Glossary** | Every metric defined, calculated, and sourced — no black boxes |
+| 10 | **Executive Summary** | Top-line KPI overview for the executive sponsor — adoption, outcomes, and value at a glance |
 
 </details>
 
@@ -250,7 +253,7 @@ While this template is purpose-built for the Microsoft ESS agent, the underlying
 
 1. Point the **Transcript File** parameter at that agent's Dataverse export.
 2. Open the **Adoption** page → click the title text box → replace "ESS Agent" with your agent name.
-3. (Optional) Open the **Metric Glossary** page → update the "About this report" callout.
+3. (Optional) Open the **Glossary** page → update the "About this report" callout.
 4. Save as a new `.pbit` and re-distribute to your stakeholders.
 
 No semantic-model edits required.
