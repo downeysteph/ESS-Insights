@@ -2,7 +2,7 @@
 
 > **Measure the real-world impact of your Microsoft Employee Self-Service (ESS) Copilot Studio agent — adoption, outcomes, deflection, and user feedback — using only the data your agent already produces.**
 
-A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with a 10-page executive dashboard that answers the questions HR, IT, and the executive sponsor will actually ask after launch.
+A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with a 9-page executive dashboard that answers the questions HR, IT, and the executive sponsor will actually ask after launch.
 
 > 📊 **Data source:** This report leverages the **`ConversationTranscript` Dataverse table** that Copilot Studio writes for every agent conversation. No custom logging, no extra pipelines — just the data your agent already produces.
 
@@ -21,6 +21,18 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 
 ---
 
+<details>
+<summary><strong>🆕 What's new in v1.6</strong></summary>
+
+- **Scheduled/auto-refresh support** — every data source (Dataverse and web/SharePoint CSV) is restructured so the Power BI service can refresh it on a schedule without hitting the *"dynamic data source"* block. **Dataverse Direct and SharePoint/OneDrive-hosted CSVs now refresh gateway-free.** See **[AUTO-REFRESH.md](AUTO-REFRESH.md)**.
+- **Cleaner topic detection** — built-in Copilot Studio system topics (Greeting, Goodbye, Escalate, Fallback, Sign in, etc.) are now filtered out of topic analysis across every page, so only genuine user-query topics surface. *(Conversation Start is intentionally kept as a real topic.)*
+- **Reorganized pages** — the value scorecard is now the landing **Executive Summary** page, followed by Conversation Outcomes, Adoption, Time to Knowledge, Conversation Details, Agent Feedback, Business Impact, Improvement Opportunities, and Glossary.
+- **Expanded glossary** — added definitions for the Executive Summary page and the Improvement Opportunities training-backlog views.
+
+</details>
+
+---
+
 ## Why use this template for your ESS agent
 
 <details>
@@ -35,7 +47,7 @@ The Microsoft ESS agent gives your employees a single, conversational front door
 - **Are employees happy with it?** In-conversation thumbs, CSAT, verbatim comments
 - **Which intents need authoring help?** Per-topic deflection, abandonment, and outcomes
 
-All ten pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
+All nine pages light up from a single Power Platform export. Add optional companion files to unlock organization/country breakouts, satisfaction scores, and credit cost analysis.
 
 </details>
 
@@ -44,20 +56,21 @@ All ten pages light up from a single Power Platform export. Add optional compani
 ## What you get
 
 <details>
-<summary><strong>Click to expand — 10-page dashboard overview</strong></summary>
+<summary><strong>Click to expand — 9-page dashboard overview</strong></summary>
 
 | # | Page | What it answers |
 |---|---|---|
-| 1 | **Measuring Value Over Time** | Value model: how adoption, operational efficiency, outcomes, productivity, and quality translate into measurable business value over time |
-| 2 | **Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
-| 3 | **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
-| 4 | **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
-| 5 | **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
-| 6 | **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
-| 7 | **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
-| 8 | **Improvement Opportunities** | Which intents need authoring help — per-topic deflection, abandonment, and outcomes to prioritize |
+| 1 | **Executive Summary** | Top-line scorecard for the sponsor — adoption, business outcomes, operational KPIs, productivity, and quality (and the value they create over time) at a glance |
+| 2 | **Conversation Outcomes** | Resolution / escalation / abandonment trend, topic outcomes, top deflected topics |
+| 3 | **Adoption** | Volume, distinct users, repeat-usage rate, DAU/WAU/MAU, breakdown by Org & Country |
+| 4 | **Time to Knowledge** | Avg duration, response time, turns to resolve, abandonment & unengaged rate |
+| 5 | **Conversation Details** | Per-topic drill-through with full transcripts and a first-message word cloud |
+| 6 | **Agent Feedback** | In-conversation thumbs, CSAT, verbatim comments, satisfaction trend |
+| 7 | **Business Impact** | Tickets deflected, hours saved, $ saved, credit-consumption leaderboard |
+| 8 | **Improvement Opportunities** | Which intents need authoring help — per-topic deflection, abandonment, and the training backlog to prioritize |
 | 9 | **📖 Glossary** | Every metric defined, calculated, and sourced — no black boxes |
-| 10 | **Executive Summary** | Top-line KPI overview for the executive sponsor — adoption, outcomes, and value at a glance |
+
+*(A hidden **Alternate Executive Summary** page is retained in the file as an optional layout — not shown in the published report.)*
 
 </details>
 
@@ -164,14 +177,16 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **How it loads data** | You export `ConversationTranscript` to CSV, then point the template at the file | The template connects live to your Dataverse environment via the native Power BI connector |
 | **Setup time** | ~10 min | ~5 min |
 | **Refresh** | Re-export the CSV, drop it at the same path, click Refresh | One click — pulls live from Dataverse |
-| **Power BI Service refresh** | Needs a **Gateway** pointing at the CSV folder | **No Gateway** — cloud-to-cloud |
+| **Power BI Service refresh** | **No Gateway** if the CSV is hosted on SharePoint/OneDrive; local/network paths need a Gateway | **No Gateway** — cloud-to-cloud |
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard Template 1.5 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.5%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.5 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.5%20(Dataverse).pbit) |
+| **Get the template** | [`ESS Dashboard Template 1.6 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.6%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.6 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.6%20(Dataverse).pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
+
+> 🔄 **Want it to update itself?** See **[Set up automatic (scheduled) refresh ↗](AUTO-REFRESH.md)** — gateway‑free for Dataverse Direct and for SharePoint/OneDrive‑hosted CSVs.
 
 ---
 

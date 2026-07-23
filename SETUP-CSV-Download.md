@@ -97,7 +97,7 @@ You can skip this step and add Agent Credits later — the template loads cleanl
 ## Step 4 — Download & open the template
 
 1. **Download the .pbit**
-   - In this repo, click **[`ESS Dashboard Template 1.5 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.5%20(CSV%20Upload).pbit)**
+   - In this repo, click **[`ESS Dashboard Template 1.6 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.6%20(CSV%20Upload).pbit)**
    - Click **Download raw file** (top-right of the file preview)
 
 2. **Open it**
@@ -141,7 +141,7 @@ Then check the **Metric Glossary** page (📖) — every metric on every page is
 | Goal | How |
 |---|---|
 | **Refresh after new export** | Drop the fresh CSV at the same path → **Home → Refresh** |
-| **Publish to Power BI Service** | **Home → Publish** → pick workspace. Schedule refresh needs a Gateway pointing at your CSV folder |
+| **Publish to Power BI Service** | **Home → Publish** → pick workspace. For **gateway‑free scheduled refresh**, host the CSV on **SharePoint/OneDrive** — see **[AUTO-REFRESH.md](./AUTO-REFRESH.md)**. A local/network CSV needs an on‑prem data gateway. |
 | **Export to PDF for monthly recap** | **File → Export → Export to PDF** |
 | **Re-brand for a different agent** | Edit the "ESS Agent" title text on each page header → save as new `.pbit` |
 

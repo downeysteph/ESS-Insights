@@ -70,7 +70,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ## Step 4 — Download & open the template
 
-1. In this repo, click **`ESS Dashboard Template 1.5 (Dataverse).pbit`** → **Download raw file**.
+1. In this repo, click **[`ESS Dashboard Template 1.6 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.6%20(Dataverse).pbit)** → **Download raw file**.
 2. Double-click the downloaded `.pbit` — it opens in Power BI Desktop and shows a parameter prompt.
 
 ---
@@ -123,7 +123,7 @@ Then check the **Metric Glossary** page (📖) — every metric is defined there
 |---|---|
 | **Refresh with latest transcripts** | **Home → Refresh** — pulls live from Dataverse |
 | **Publish to Power BI Service** | **Home → Publish**. **No Gateway required** — cloud-to-cloud |
-| **Schedule refresh** | Service: dataset → **Settings → Scheduled refresh** |
+| **Schedule refresh** | Service: dataset → **Settings → Scheduled refresh**. Bind Dataverse credentials (OAuth2 / Organizational) first. Step‑by‑step: **[AUTO-REFRESH.md](./AUTO-REFRESH.md)** |
 | **Export to PDF** | **File → Export → Export to PDF** |
 | **Switch environments** | **Transform data → Edit Parameters → Dataverse Environment URL** → re-auth via Data source settings |
 
