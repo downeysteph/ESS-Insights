@@ -22,8 +22,9 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 ---
 
 <details>
-<summary><strong>🆕 What's new in v1.6</strong></summary>
+<summary><strong>🆕 What's new in v1.8</strong></summary>
 
+- **More accurate session counts** — test/authoring conversations (Copilot Studio Test pane) are now reliably excluded. Published agents record the `isDesignMode` flag in a different place (the `ConversationInfo` trace) than the test canvas does; the template now reads both, so design-mode traffic no longer inflates your session totals and counts align more closely with the in-product numbers.
 - **Scheduled/auto-refresh support** — every data source (Dataverse and web/SharePoint CSV) is restructured so the Power BI service can refresh it on a schedule without hitting the *"dynamic data source"* block. **Dataverse Direct and SharePoint/OneDrive-hosted CSVs now refresh gateway-free.** See **[AUTO-REFRESH.md](AUTO-REFRESH.md)**.
 - **Cleaner topic detection** — built-in Copilot Studio system topics (Greeting, Goodbye, Escalate, Fallback, Sign in, etc.) are now filtered out of topic analysis across every page, so only genuine user-query topics surface. *(Conversation Start is intentionally kept as a real topic.)*
 - **Reorganized pages** — the value scorecard is now the landing **Executive Summary** page, followed by Conversation Outcomes, Adoption, Time to Knowledge, Conversation Details, Agent Feedback, Business Impact, Improvement Opportunities, and Glossary.
@@ -181,7 +182,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard Template 1.6 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.6%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.6 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.6%20(Dataverse).pbit) |
+| **Get the template** | [`ESS Dashboard Template 1.8 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.8%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.8 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.8%20(Dataverse).pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
