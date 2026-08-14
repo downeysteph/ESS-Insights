@@ -22,6 +22,22 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 ---
 
 <details>
+<summary><strong>🆕 What's new in V6</strong></summary>
+
+- **Fuller Metric Glossary** — added definitions across every page: the weekly user‑retention cohorts (**New**, **Retained**, **Churned**, **Resurrected** users), the split **Daily / Weekly / Monthly Active Users**, the topic leaderboards (**Most popular**, **Top deflected**, **Hardest to answer**), plus **Zero‑Result Rate**, **Total Primary Topics**, **Value $ per Credit**, **Content Gap Conversations**, **CSAT Responses**, and **Total Feedback**. Every entry mirrors the exact measure logic in the model.
+- **Cleaner verbatim feedback** — the Agent Feedback **Verbatim Feedback Comments** table now shows only comments tied to a thumbs up/down reaction, so blank/unrated rows no longer appear.
+- Applies to both the CSV Upload and Dataverse Direct templates.
+
+</details>
+
+<details>
+<summary><strong>🆕 What's new in V5</strong></summary>
+
+- **Thumbs up/down feedback now captured from the current Teams format** — the Agent Feedback page (in-conversation thumbs, CSAT, satisfaction trend, and verbatim comments) now reads reactions exported in the latest Copilot Studio / Teams feedback-loop format **in addition to** the legacy format. Reactions and comments that previously showed as zero/blank now flow through correctly. Applies to both the CSV Upload and Dataverse Direct templates.
+
+</details>
+
+<details>
 <summary><strong>🆕 What's new in v1.8</strong></summary>
 
 - **More accurate session counts** — test/authoring conversations (Copilot Studio Test pane) are now reliably excluded. Published agents record the `isDesignMode` flag in a different place (the `ConversationInfo` trace) than the test canvas does; the template now reads both, so design-mode traffic no longer inflates your session totals and counts align more closely with the in-product numbers.
@@ -182,7 +198,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard Template 1.8 (CSV Upload).pbit`](./ESS%20Dashboard%20Template%201.8%20(CSV%20Upload).pbit) | [`ESS Dashboard Template 1.8 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.8%20(Dataverse).pbit) |
+| **Get the template** | [`ESS Dashboard - Dynamic Topics (CSV) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V6.pbit) | [`ESS Dashboard - Dynamic Topics (Dataverse) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V6.pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.

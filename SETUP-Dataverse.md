@@ -70,7 +70,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ## Step 4 — Download & open the template
 
-1. In this repo, click **[`ESS Dashboard Template 1.8 (Dataverse).pbit`](./ESS%20Dashboard%20Template%201.8%20(Dataverse).pbit)** → **Download raw file**.
+1. In this repo, click **[`ESS Dashboard - Dynamic Topics (Dataverse) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V6.pbit)** → **Download raw file**.
 2. Double-click the downloaded `.pbit` — it opens in Power BI Desktop and shows a parameter prompt.
 
 ---

@@ -30,7 +30,7 @@ This guide covers the three supported hosting paths and the exact steps for each
 
 The Dataverse Direct template connects the service **directly to your Dataverse environment** — no exported files, no gateway.
 
-1. **Publish** the `ESS Dashboard Template 1.8 (Dataverse)` report to your workspace.
+1. **Publish** the `ESS Dashboard - Dynamic Topics (Dataverse) V6` report to your workspace.
 2. In the service, open the **dataset → Settings** (or **… → Settings** next to the dataset).
 3. Expand **Data source credentials** and click **Edit credentials** on the Dataverse source:
    - **Authentication method:** `OAuth2`
@@ -60,7 +60,7 @@ You can get **gateway‑free cloud refresh** with the CSV Upload template *if th
 
 ### B2. Point the template at it
 
-3. Open `ESS Dashboard Template 1.8 (CSV Upload)` in Desktop. When prompted (or via **Transform data → Edit Parameters**), paste the **direct SharePoint URL** into **Copilot Studio Transcript**. (Optional Org Data / Agent Credits files can be hosted the same way.)
+3. Open `ESS Dashboard - Dynamic Topics (CSV) V6` in Desktop. When prompted (or via **Transform data → Edit Parameters**), paste the **direct SharePoint URL** into **Copilot Studio Transcript**. (Optional Org Data / Agent Credits files can be hosted the same way.)
 4. **Home → Refresh** to confirm it loads locally, then **Publish** to your workspace.
 
 ### B3. Bind credentials & schedule
