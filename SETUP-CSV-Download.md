@@ -97,7 +97,7 @@ You can skip this step and add Agent Credits later — the template loads cleanl
 ## Step 4 — Download & open the template
 
 1. **Download the .pbit**
-   - In this repo, click **[`ESS Dashboard - Dynamic Topics (CSV) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V6.pbit)**
+   - In this repo, click **[`ESS Dashboard - Dynamic Topics (CSV) V7.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V7.pbit)**
    - Click **Download raw file** (top-right of the file preview)
 
 2. **Open it**
@@ -132,7 +132,7 @@ When the model finishes loading, go to the **Organization Adoption** page and sa
 - [ ] **Conversations & Users by Week** line chart shows a sensible date range matching your export window
 - [ ] If you loaded Org Data: **Users by Organization** and **Users by Country** show real labels, not just `(Blank)`
 
-Then check the **Metric Glossary** page (📖) — every metric on every page is defined there. Use it to answer "where does this number come from?" before stakeholders ask.
+Then check the **Metric Glossary** page (📖) — it defines the metrics used across the report. Use it to answer "where does this number come from?" before stakeholders ask.
 
 ---
 
@@ -181,6 +181,6 @@ Save this as a sticky note:
 
 ## Need more help?
 
-- 🐛 [Open an issue](https://github.com/downeysteph/ESS-Insights/issues)
+- 🐛 [Open an issue](https://github.com/microsoft/ESS/issues)
 - 🩺 Check the **Load Diagnostics** page (in the page selector) for row counts and parser warnings
 - 📖 The **Metric Glossary** page has every measure's definition and source

@@ -9,3 +9,25 @@ Data Files/
 !images/*.png
 .vscode/
 .idea/
+
+# Local working backups and scratch templates — never commit
+*BACKUP_*.pbit
+*RESTOREPOINT*
+*.bak
+*.bak_*
+
+# Local working artifacts — not part of the published repo
+ESS_Dashboard_*_Transcript_*.md
+ROI-Page-Spec.md
+*.pptx
+*.docx
+*.pbip
+*.Report/
+*.SemanticModel/
+_work/
+_chat-recovery/
+_synthetic_test_data/
+Working Docs VS/
+Original Templates/
+Updated Template/
+tools/

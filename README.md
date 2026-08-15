@@ -21,30 +21,19 @@ A drop-in Power BI template purpose-built for the **Microsoft ESS agent**, with 
 
 ---
 
-<details>
-<summary><strong>🆕 What's new in V6</strong></summary>
+<details open>
+<summary><strong>🆕 What's new in V7</strong></summary>
 
-- **Fuller Metric Glossary** — added definitions across every page: the weekly user‑retention cohorts (**New**, **Retained**, **Churned**, **Resurrected** users), the split **Daily / Weekly / Monthly Active Users**, the topic leaderboards (**Most popular**, **Top deflected**, **Hardest to answer**), plus **Zero‑Result Rate**, **Total Primary Topics**, **Value $ per Credit**, **Content Gap Conversations**, **CSAT Responses**, and **Total Feedback**. Every entry mirrors the exact measure logic in the model.
-- **Cleaner verbatim feedback** — the Agent Feedback **Verbatim Feedback Comments** table now shows only comments tied to a thumbs up/down reaction, so blank/unrated rows no longer appear.
-- Applies to both the CSV Upload and Dataverse Direct templates.
+- **Accurate per-agent cost and ROI** — credit consumption, cost, and ROI now scope correctly to the agent you have selected. Previously, filtering to a single agent could still show credits from every agent, overstating cost and understating ROI.
+- **Corrected weekly user mix** — the **New / Retained / Churned / Resurrected** cohort breakdown now evaluates each week against your full history rather than the visible window, so returning users are no longer misclassified as new. The weekly axis now sorts chronologically.
+- **Expanded Metric Glossary** — the glossary now covers the topic leaderboards, the weekly retention cohorts, and the credit and ROI measures, alongside the existing per-page definitions. Several definitions that did not match the underlying calculation were corrected.
+- **Business Impact page fix** — resolved a rendering issue that could leave the page showing a solid colored panel instead of its visuals.
+- **Wider savings assumptions** — the *minutes saved per ticket* selector now offers 0, 5, 10, 15, 20, 25, 30, 45, and 60 minutes.
+- **Readable verbatim feedback** — long comment tables now scroll instead of clipping.
+- **Page icons** — each page in the navigation now carries an icon for faster orientation.
+- **No hardcoded dates** — every date calculation derives from your own data, so the report stays correct in any reporting period.
 
-</details>
-
-<details>
-<summary><strong>🆕 What's new in V5</strong></summary>
-
-- **Thumbs up/down feedback now captured from the current Teams format** — the Agent Feedback page (in-conversation thumbs, CSAT, satisfaction trend, and verbatim comments) now reads reactions exported in the latest Copilot Studio / Teams feedback-loop format **in addition to** the legacy format. Reactions and comments that previously showed as zero/blank now flow through correctly. Applies to both the CSV Upload and Dataverse Direct templates.
-
-</details>
-
-<details>
-<summary><strong>🆕 What's new in v1.8</strong></summary>
-
-- **More accurate session counts** — test/authoring conversations (Copilot Studio Test pane) are now reliably excluded. Published agents record the `isDesignMode` flag in a different place (the `ConversationInfo` trace) than the test canvas does; the template now reads both, so design-mode traffic no longer inflates your session totals and counts align more closely with the in-product numbers.
-- **Scheduled/auto-refresh support** — every data source (Dataverse and web/SharePoint CSV) is restructured so the Power BI service can refresh it on a schedule without hitting the *"dynamic data source"* block. **Dataverse Direct and SharePoint/OneDrive-hosted CSVs now refresh gateway-free.** See **[AUTO-REFRESH.md](AUTO-REFRESH.md)**.
-- **Cleaner topic detection** — built-in Copilot Studio system topics (Greeting, Goodbye, Escalate, Fallback, Sign in, etc.) are now filtered out of topic analysis across every page, so only genuine user-query topics surface. *(Conversation Start is intentionally kept as a real topic.)*
-- **Reorganized pages** — the value scorecard is now the landing **Executive Summary** page, followed by Conversation Outcomes, Adoption, Time to Knowledge, Conversation Details, Agent Feedback, Business Impact, Improvement Opportunities, and Glossary.
-- **Expanded glossary** — added definitions for the Executive Summary page and the Improvement Opportunities training-backlog views.
+V7 is cumulative — it includes every improvement from the earlier 1.x, V5, and V6 releases, including scheduled-refresh support and system-topic filtering. Applies to both the CSV Upload and Dataverse Direct editions.
 
 </details>
 
@@ -198,7 +187,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard - Dynamic Topics (CSV) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V6.pbit) | [`ESS Dashboard - Dynamic Topics (Dataverse) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V6.pbit) |
+| **Get the template** | [`ESS Dashboard - Dynamic Topics (CSV) V7.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V7.pbit) | [`ESS Dashboard - Dynamic Topics (Dataverse) V7.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V7.pbit) |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
@@ -327,7 +316,7 @@ When presenting these numbers to a non-technical audience:
 
 ## Contributing & feedback
 
-Found a bug? Have a feature request? [Open an issue](https://github.com/downeysteph/ESS-Insights/issues) — feedback from real ESS customers makes this template better for everyone.
+Found a bug? Have a feature request? [Open an issue](https://github.com/microsoft/ESS/issues) — feedback from real ESS customers makes this template better for everyone.
 
 ---
 
