@@ -70,7 +70,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ## Step 4 — Download & open the template
 
-1. In this repo, click **[`ESS Dashboard - Dynamic Topics (Dataverse) V6.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V6.pbit)** → **Download raw file**.
+1. In this repo, click **[`ESS Dashboard - Dynamic Topics (Dataverse) V7.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V7.pbit)** → **Download raw file**.
 2. Double-click the downloaded `.pbit` — it opens in Power BI Desktop and shows a parameter prompt.
 
 ---
@@ -113,7 +113,7 @@ Go to the **Organization Adoption** page and sanity-check:
 - [ ] **Conversations & Users by Week** matches your Lookback Days
 - [ ] If you loaded Org Data: **Users by Organization** and **Users by Country** show real labels
 
-Then check the **Metric Glossary** page (📖) — every metric is defined there.
+Then check the **Metric Glossary** page (📖) — it defines the metrics used across the report.
 
 ---
 
@@ -177,6 +177,6 @@ Then check the **Metric Glossary** page (📖) — every metric is defined there
 
 ## Need more help?
 
-- 🐛 [Open an issue](https://github.com/downeysteph/ESS-Insights/issues)
+- 🐛 [Open an issue](https://github.com/microsoft/ESS/issues)
 - 🩺 Check the **Load Diagnostics** page for row counts and parser warnings
 - 📖 The **Metric Glossary** page has every measure's definition
