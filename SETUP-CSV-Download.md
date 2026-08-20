@@ -1,5 +1,8 @@
 # Step-by-Step Setup Guide
 
+> [!IMPORTANT]
+> ⚠️ **This repository is retired.** ESS Insights has moved to the official Microsoft repository — **➡️ [github.com/microsoft/ESS](https://github.com/microsoft/ESS)**. Please get the latest templates and setup guides there. The guide below is retained for reference only.
+
 Get the **ESS Insights dashboard** running on your own Copilot Studio agent data in about **10 minutes**.
 
 ---
@@ -97,7 +100,7 @@ You can skip this step and add Agent Credits later — the template loads cleanl
 ## Step 4 — Download & open the template
 
 1. **Download the .pbit**
-   - In this repo, click **[`ESS Dashboard - Dynamic Topics (CSV) V10.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V10.pbit)**
+   - ⚠️ **This repository is retired — the template is no longer hosted here.** Download the current **CSV Upload** template from the new official repository: **➡️ [github.com/microsoft/ESS](https://github.com/microsoft/ESS)**
    - Click **Download raw file** (top-right of the file preview)
 
 2. **Open it**

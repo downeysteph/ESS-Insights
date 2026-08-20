@@ -1,5 +1,8 @@
 # Step-by-Step Setup Guide — Dataverse Direct
 
+> [!IMPORTANT]
+> ⚠️ **This repository is retired.** ESS Insights has moved to the official Microsoft repository — **➡️ [github.com/microsoft/ESS](https://github.com/microsoft/ESS)**. Please get the latest templates and setup guides there. The guide below is retained for reference only.
+
 Get the **ESS Insights dashboard** running on your own Copilot Studio agent data, **connected live to Dataverse** — no CSV exports, no file paths, no manual refresh shuffle.
 
 > 💡 **Which version is this?** This is the **Dataverse Direct** template. It pulls `conversationtranscript` rows straight from the Dataverse environment that hosts your agent. If you'd rather work with a one-time CSV export, use the [CSV Upload guide](./SETUP-CSV-Download.md) instead.
@@ -70,7 +73,7 @@ Get the **ESS Insights dashboard** running on your own Copilot Studio agent data
 
 ## Step 4 — Download & open the template
 
-1. In this repo, click **[`ESS Dashboard - Dynamic Topics (Dataverse) V10.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V10.pbit)** → **Download raw file**.
+1. ⚠️ **This repository is retired — the template is no longer hosted here.** Download the current **Dataverse Direct** template from the new official repository: **➡️ [github.com/microsoft/ESS](https://github.com/microsoft/ESS)** → **Download raw file**.
 2. Double-click the downloaded `.pbit` — it opens in Power BI Desktop and shows a parameter prompt.
 
 ---

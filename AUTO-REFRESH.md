@@ -1,5 +1,8 @@
 # Set up automatic (scheduled) refresh
 
+> [!IMPORTANT]
+> ⚠️ **This repository is retired.** ESS Insights has moved to the official Microsoft repository — **➡️ [github.com/microsoft/ESS](https://github.com/microsoft/ESS)**. Please get the latest templates and setup guides there. The guide below is retained for reference only.
+
 Keep your ESS Insights dashboard current **without re‑opening Power BI Desktop** by letting the **Power BI / Microsoft Fabric service** refresh the data on a schedule.
 
 This guide covers the three supported hosting paths and the exact steps for each:

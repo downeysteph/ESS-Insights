@@ -1,3 +1,26 @@
+<div align="center">
+
+# 🚚 This repository has moved
+
+### ➡️ ESS Insights is now maintained by Microsoft at **[github.com/microsoft/ESS](https://github.com/microsoft/ESS)**
+
+</div>
+
+> [!IMPORTANT]
+> ## 🚚 This repository is retired — please use the new official repo
+>
+> **ESS Insights now lives at 👉 [https://github.com/microsoft/ESS](https://github.com/microsoft/ESS)**
+>
+> All new development, the **latest templates**, setup guides, and support have moved to the official Microsoft repository. **Please update your bookmarks.**
+>
+> - ✅ **Get the latest templates and docs here:** **[github.com/microsoft/ESS](https://github.com/microsoft/ESS)**
+> - 🗄️ The templates previously published on this repo are **out of date** and have been moved to the [`Archive/`](./Archive) folder. They are kept for reference only — **do not use them for new deployments.**
+> - ⛔ Template download links have been removed from this repository. For the current `.pbit` templates, go to **[github.com/microsoft/ESS](https://github.com/microsoft/ESS)**.
+>
+> The content below is retained for historical reference only.
+
+---
+
 # ESS Insights — Employee Self-Service Agent Analytics
 
 > **Measure the real-world impact of your Microsoft Employee Self-Service (ESS) Copilot Studio agent — adoption, outcomes, deflection, and user feedback — using only the data your agent already produces.**
@@ -217,7 +240,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | **Who can run it** | Anyone who can run the Dataverse export | Anyone with the **Bot Transcript Viewer** role on the environment |
 | **Lookback control** | Whatever the export window allows (default 30 days) | Parameter — pull 30 / 90 / 365 days at will |
 | **Best for** | One-off snapshots, demos, sharing with people outside the tenant | Production dashboards, scheduled refresh, ongoing monitoring |
-| **Get the template** | [`ESS Dashboard - Dynamic Topics (CSV) V10.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(CSV)%20V10.pbit) | [`ESS Dashboard - Dynamic Topics (Dataverse) V10.pbit`](./ESS%20Dashboard%20-%20Dynamic%20Topics%20(Dataverse)%20V10.pbit) |
+| **Get the template** | ➡️ **[Download from the new repo → github.com/microsoft/ESS](https://github.com/microsoft/ESS)** | ➡️ **[Download from the new repo → github.com/microsoft/ESS](https://github.com/microsoft/ESS)** |
 | **Setup guide** | 📘 **[Written Setup Guide — CSV Upload](./SETUP-CSV-Download.md)** | 📘 **[Written Setup Guide — Dataverse Direct](./SETUP-Dataverse.md)** |
 
 > 💡 **Not sure?** If this is your first time exploring the dashboard, start with **CSV Upload** — no tenant permissions needed beyond running the Dataverse export. Move to **Dataverse Direct** once you're ready to put the dashboard in front of stakeholders on a schedule.
@@ -250,7 +273,7 @@ This dashboard ships in **two flavors**. Pick the one that matches how you want 
 | 2 | **Org Data** (HR roster) | ⭐ Recommended | [admin.microsoft.com](https://admin.microsoft.com) → **Users ▸ Active users ▸ Export users ▸ Confirm** | [📘 Dataverse guide — Step 2](./SETUP-Dataverse.md) |
 | 3 | **Agent Credits** | Optional | [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) → open your agent → **Analytics ▸ Message Consumption** → **Export** | [📘 Dataverse guide — Step 3](./SETUP-Dataverse.md) |
 
-**Next:** download the matching `.pbit` from [Choose your path](#quick-start--choose-your-path) above, open it in Power BI Desktop, and paste your file paths (or environment URL) into the parameter prompt.
+**Next:** ⚠️ **The templates are no longer hosted here.** Download the current `.pbit` from the new official repository — **[github.com/microsoft/ESS](https://github.com/microsoft/ESS)** — then open it in Power BI Desktop and paste your file paths (or environment URL) into the parameter prompt.
 → **[Full CSV setup guide](./SETUP-CSV-Download.md)** · **[Full Dataverse setup guide](./SETUP-Dataverse.md)**
 
 > 🔑 **Can't find the ConversationTranscript table, or transcripts come back empty?** You're almost certainly missing the **Bot Transcript Viewer** security role (Environment Maker is *not* enough), or your agent runs in an unsupported environment (Teams / M365 Copilot). See [Before you start](#before-you-start) and [Prerequisites — details](#prerequisites--details).
